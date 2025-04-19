@@ -1,0 +1,54 @@
+{
+  "name": "web-crawler-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for advanced web search using web-crawler",
+  "type": "module",
+  "bin": {
+    "web-crawler-mcp": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "web-crawler-mcp",
+    "web-crawler",
+    "mcp",
+    "model-context-protocol",
+    "websearch",
+    "claude",
+    "claude-desktop",
+    "search-api",
+    "web-search",
+    "ai-search",
+    "anthropic",
+    "real-time-search",
+    "search-tools",
+    "web-crawler-extract",
+    "web-extraction",
+    "data-extraction",
+    "search-integration"
+  ],
+  "author": "web-crawler-mcp",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "puppeteer": "^24.6.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/node": "^20.11.24",
+    "@types/puppeteer": "^7.0.4",
+    "typescript": "^5.3.3"
+  }
+}
