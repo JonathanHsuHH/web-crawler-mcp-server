@@ -116,7 +116,7 @@ class WebCrawler {
     try {
       const url = params.url;
       // @ts-ignore
-      const browser: Browser = await puppeteer.launch({ headless: false });
+      const browser: Browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
       const page: Page = await browser.newPage();
     
       // Optionally set a realistic user agent
